@@ -10,11 +10,15 @@ function start(cells) {
             } else {
                 this.textContent = '0';
             }
-            i++;
+
             this.removeEventListener('click', step);
             if (isWinner(cells) == true) {
                 alert(`Победитель ${this.textContent}`);
+            } else if (i == 8) {
+                alert('ничья');
             };
+
+            i++;
         })
     }
 }
